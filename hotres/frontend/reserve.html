@@ -76,11 +76,10 @@
 <!-- ===========CONTAINER=================== -->
 </div>
 <!-- Links -->
-
-
-  <!-- <script type="text/javascript"></script> -->
+<!-- JAVASCRIPT -->
 
 <script type="text/javascript">
+$(".submit").on("click", function(){
   // POST Data from express
 var reserveTable = {
     guestName: $('#guestName').val().trim(),
@@ -92,10 +91,27 @@ var reserveTable = {
 console.log(reserveTable);
  // Callbacks using Ajacks
  // APT Return 
+// clear the form after 5 tables
+var presentWebpage = window.location.origin;
+  $.post(currentURL + "/api/tables", reserveTable,
+    function(data){
 
- // if statements for true or false
+// if statements for true or false Compliting reservation or On Waiting list
+        if(data == true){
+          alert("Reservation Completed")
+        }
+        if(data == false){
+          alert("You're on the wait list")
+        }
 
- // clear the form after 5 tables
+// Clear when submitting
+      $('#guestName').val("");
+      $('#guestNumber').val("");
+      $('#guestEmail').val("");
+      $('#guestID').val("");
+      });
+return false;
+});
 
 </script>
 </body>
