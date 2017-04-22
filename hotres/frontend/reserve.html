@@ -45,23 +45,23 @@
   <div class="panel-body">
   <form>
     <div class="form-group">
-      <label for="exampleInputEmail1">Name</label>
-        <input type="name" class="form-control" id="exampleInputEmail1" >
+      <label for="guestName">Name</label>
+        <input type="name" class="form-control" id="guestName" >
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPassword1">Phone Number</label>
-        <input type="phonenumber" class="form-control" id="exampleInputPassword1" >
+      <label for="guestNumber">Phone Number</label>
+        <input type="phonenumber" class="form-control" id="guestNumber" >
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPassword1">Email</label>
-        <input type="email" class="form-control" id="exampleInputPassword1" >
+      <label for="guestEmail">Email</label>
+        <input type="email" class="form-control" id="guestEmail" >
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPassword1">Unique ID</label>
-        <input type="uniqueid" class="form-control" id="exampleInputPassword1" >
+      <label for="guestID">Unique ID</label>
+        <input type="uniqueid" class="form-control" id="guestID" >
     </div>
 <button type="submit" class="btn btn-primary"> Submit</button>
     
@@ -73,9 +73,6 @@
  <a href="#">API Table Link</a> | <a href="#">API Wait List</a>
 </div>
 
-
-
-
 <!-- ===========CONTAINER=================== -->
 </div>
 <!-- Links -->
@@ -83,5 +80,23 @@
 
   <!-- <script type="text/javascript"></script> -->
 
+<script type="text/javascript">
+  // POST Data from express
+var reserveTable = {
+    guestName: $('#guestName').val().trim(),
+    guestNumber: $('#guestNumber').val().trim(),
+    guestEmail: $('#guestEmail').val().trim(),
+    guestID: $('#guestID').val().trim() 
+  };
+
+console.log(reserveTable);
+ // Callbacks using Ajacks
+ // APT Return 
+
+ // if statements for true or false
+
+ // clear the form after 5 tables
+
+</script>
 </body>
 </html>
